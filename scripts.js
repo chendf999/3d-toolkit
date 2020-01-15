@@ -1,14 +1,18 @@
-let mainCards = [
-  { front: '03', back: '04' },
-  { front: '05', back: '06' },
-  { front: '07', back: '08' }
-]
+let mainCards = []
+let methodCards = []
 
-let methodCards = [
-  { front: '03', back: '04' },
-  { front: '05', back: '06' },
-  { front: '07', back: '08' }
-]
+function generateCards(num, cards){
+  for (var i = 3; i <= num; i++) {
+    if ( i % 2 !== 0){
+      cards.push({
+        front: i, back: i+1
+      })
+    }
+  }
+}
+
+generateCards(36, mainCards);
+generateCards(72, methodCards);
 
 $(document).ready(function() {
 
@@ -16,9 +20,9 @@ $(document).ready(function() {
     mainCards[i].id = 'main-' + i;
     let left = 20+30*i;
     let div = `<div class="card ${item.id}"  style="position:absolute;left:${left}px">
-    <img class="back" src="./main-cards/3D Toolkit-v5_Page_${item.back}.jpg">
-    <img class="front" src="./main-cards/3D Toolkit-v5_Page_${item.front}.jpg">
-    <p>Read More</p>
+    <img class="back" src="./main-cards/maincard${item.back}.jpg">
+    <img class="front" src="./main-cards/maincard${item.front}.jpg">
+    <p>More</p>
     </div>
     `
     $('.main-cards .deck').append(div);
@@ -28,9 +32,9 @@ $(document).ready(function() {
     methodCards[i].id = 'method-' + i;
     let left = 20+20*i;
     let div = `<div class="card ${item.id}" style="position:absolute;left:${left}px">
-    <img class="back" src="./method-cards/method-jpg_Page_${item.back}.jpg">
-    <img class="front" src="./method-cards/method-jpg_Page_${item.front}.jpg">
-    <p>Read More</p>
+    <img class="back" src="./method-cards/methodcard${item.back}.jpg">
+    <img class="front" src="./method-cards/methodcard${item.front}.jpg">
+    <p>More</p>
     </div>
     `
     $('.method-cards .deck').append(div);

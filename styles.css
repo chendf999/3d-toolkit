@@ -31,7 +31,7 @@ body {
 /* card layout */
 .main-cards .card, .method-cards .card {
   width: 200px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   border-radius: 10px;
   overflow: hidden;
   display: inline-block;
@@ -48,6 +48,7 @@ body {
 
 .card:hover {
   cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 1;
 }
 
@@ -55,6 +56,7 @@ body {
 .card p {
   font-size: 10px;
   position: absolute;
-  bottom: 10px; right: 15px;
+  bottom: 10px; right: 12px;
 }
-.card p:hover { color: grey;}
+.method-cards .card p { color: white;}
+.card p:hover { opacity: 0.5}
