@@ -5,6 +5,13 @@ body {
   padding: 20px;
 }
 
+.background {
+  position: fixed;
+  top: 0; right: 0;
+}
+
+.background img { height: 100vh;}
+
 /* positioning and styling*/
 
 .title h1 {
