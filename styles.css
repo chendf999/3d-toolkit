@@ -3,11 +3,13 @@
 body {
   font-family: 'Roboto', sans-serif;
   padding: 20px;
+  min-height: 200vh;
 }
 
 .background {
   position: fixed;
   top: 0; right: 0;
+  z-index: -1;
 }
 
 .background img { height: 100vh;}
@@ -24,7 +26,7 @@ body {
   margin-bottom: 10px;
 }
 
-.main-cards h2, .method-cards h2{
+h2{
   margin-bottom: 12px;
   color: grey
 }
@@ -67,3 +69,34 @@ body {
 }
 .method-cards .card p { color: white;}
 .card p:hover { opacity: 0.5}
+
+.plan { margin-top: 70px;}
+
+.plan .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.plan .demo-main, .plan .demo-method {
+  width: 200px;
+  border: 1px dashed lightgrey;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan .demo-main {
+  height: 280px;
+}
+
+.plan .demo-main:last-child {
+  border: none;
+}
+
+.plan .demo-method {
+  height: 140px;
+}
